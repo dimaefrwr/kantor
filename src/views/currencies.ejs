@@ -1,0 +1,12 @@
+<% if (rates && rates.length > 0) { %>
+  <h1>Currencies</h1>
+  <ul>
+    <% rates.forEach(rate => { %>
+      <li><%= rate.currency %> - <%= rate.mid %></li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No currency rates available</p>
+<% } %>
+
+<p>Exchange rates: <%= JSON.stringify(rates) %></p>
